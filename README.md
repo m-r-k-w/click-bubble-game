@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Click Bubble Game
 
-## Getting Started
+## 概要
+泡をクリック/タップして消す、シンプルなWebブラウザゲームです。Next.js + TypeScript + Tailwind CSSで実装し、Vercelでのデプロイを前提としています。
 
-First, run the development server:
+## 主な要件
+- まるい泡が次々と画面に現れる
+- 泡をPCはクリック、スマホはタップで消す
+- 泡が消えるときにやみつきになる音が鳴る
+- 制限時間は15秒、30秒、60秒の3種類
+- 難易度はeasy, normal, hardの3種類（色・出現頻度・同時出現数が変化）
+- スコア表示、リトライ機能、Topへ戻るボタン
+- スマホ・PC両対応
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 今後の実装予定
+1. Top画面・ゲーム画面・リザルト画面の作成
+2. 泡の生成・消去ロジックの実装
+3. 難易度・制限時間の選択機能
+4. 音素材の追加
+5. スコア・リトライ・Topへ戻る機能
+6. UI/UX調整・スマホ対応
+7. テスト・デプロイ
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
