@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 'use client';
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useRef, useState, Suspense } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // 泡の型
 interface Bubble {
@@ -26,7 +26,7 @@ function getRandomPosition() {
   return { x, y };
 }
 
-function GamePageInner() {
+export default function GamePage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const difficulty = searchParams.get("difficulty");
@@ -120,13 +120,5 @@ function GamePageInner() {
         />
       ))}
     </main>
-  );
-}
-
-export default function GamePage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <GamePageInner />
-    </Suspense>
   );
 } 
