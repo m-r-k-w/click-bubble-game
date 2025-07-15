@@ -1,6 +1,6 @@
 'use client';
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Suspense } from "react";
 
 // 泡の型
 interface Bubble {
@@ -25,7 +25,7 @@ function getRandomPosition() {
   return { x, y };
 }
 
-export default function GamePage() {
+function GamePageInner() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const difficulty = searchParams.get("difficulty");
@@ -119,5 +119,13 @@ export default function GamePage() {
         />
       ))}
     </main>
+  );
+}
+
+export default function GamePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <GamePageInner />
+    </Suspense>
   );
 } 
